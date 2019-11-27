@@ -739,9 +739,9 @@ export class Checker extends ParseTreeWalker {
             return;
         }
 
-        // A name of "_" means "I know this symbol isn't used", so
+        // A name starting with "_" means "I know this symbol isn't used", so
         // don't report it as unused.
-        if (name === '_') {
+        if (name.startsWith('_')) {
             return;
         }
 
